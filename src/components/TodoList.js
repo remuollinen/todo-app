@@ -1,9 +1,21 @@
 import React from "react";
+import Todo from "./Todo";
 
-function TodoList() {
+function TodoList({ todos, setTodos }) {
   return (
     <div className="todo-container">
-      <h2>Todos</h2>
+      <ul>
+        {todos.map((todo) => (
+          <Todo
+            text={todo.text}
+            todo={todo}
+            key={todo.id}
+            completed={todo.completed}
+            todos={todos}
+            setTodos={setTodos}
+          />
+        ))}
+      </ul>
     </div>
   );
 }
