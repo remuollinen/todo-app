@@ -1,6 +1,6 @@
 import React from "react";
 
-function Form({ inputText, setInputText, todos, setTodos }) {
+function Form({ inputText, setInputText, todos, setTodos, setFilter }) {
   const addInputTextHandler = (e) => {
     setInputText(e.target.value);
   };
@@ -20,6 +20,8 @@ function Form({ inputText, setInputText, todos, setTodos }) {
     }
   };
 
+  const filterHandler = (e) => setFilter(e.target.value);
+
   return (
     <form className="form">
       <input
@@ -32,7 +34,7 @@ function Form({ inputText, setInputText, todos, setTodos }) {
       <button onClick={submitTodo} className="add-btn">
         +
       </button>
-      <select name="select" id="select">
+      <select onChange={filterHandler} name="select" id="select">
         <option value="All">All</option>
         <option value="Completed">Completed</option>
         <option value="Uncompleted">Uncompleted</option>

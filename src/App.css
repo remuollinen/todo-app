@@ -17,10 +17,11 @@
 
 .header-text {
   font-size: 1.5rem;
+  margin: 50px 0;
 }
 
 .form {
-  margin: 50px;
+  margin: 10px;
 }
 
 .input {
@@ -84,12 +85,12 @@
 }
 
 .todo-item {
-  width: 50vw;
+  width: 70vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex: 1;
-  padding: 20px;
+  padding: 10px;
   margin: 10px;
   background-color: #fff;
   border-radius: 20px;
@@ -97,11 +98,12 @@
 }
 
 .todo-text {
+  padding: 0 10px 0 0;
   font-size: 1.5rem;
   background-color: transparent;
 }
 
-.todo-text.completed {
+.completed {
   opacity: 0.5;
   text-decoration-line: line-through;
   text-decoration-color: #111;
@@ -110,7 +112,7 @@
 
 .todo-btns {
   height: 38px;
-  width: 90px;
+  min-width: 90px;
   display: flex;
   justify-content: space-between;
   background-color: #fff;
@@ -138,3 +140,56 @@
 .trash-icon:hover {
   color: rgb(218, 1, 1);
 }
+
+@media screen and (max-width: 930px) {
+  .header {
+    font-size: 2.5rem;
+  }
+
+  .header-text {
+    font-size: 1rem;
+  }
+
+  .input {
+    height: 60px;
+    width: 80vw;
+    font-size: 1.2rem;
+  }
+
+  .add-btn {
+    align-items: center;
+    font-size: 1.5rem;
+    height: 30px;
+    width: 30px;
+    margin-left: -50px;
+    transform: translateY(50%);
+    cursor: pointer;
+    border-radius: 50%;
+    border-color: #111;
+    background-color: transparent;
+    position: absolute;
+  }
+
+  .form {
+    margin: 20px 0px 0px 0px;
+  }
+
+  #select {
+    height: 60px;
+    width: 60vw;
+    margin: 15px;
+    font-size: 1.2rem;
+  }
+
+  .todo-container {
+    margin: 40px 0;
+  }
+
+  .todo-item {
+    width: 90vw;
+  }
+
+  .todo-text {
+    font-size: 1.2rem;
+  }
+} ;
